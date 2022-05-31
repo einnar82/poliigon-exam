@@ -1,920 +1,920 @@
 {
-	"info": {
-		"_postman_id": "058c4151-cc4b-4d28-8f33-6e48b7cc77d9",
-		"name": "Bank API",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "Bank Transfers",
-			"item": [
-				{
-					"name": "Create a bank transfer",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "default"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"sender_bank_account_id\": 1,\n    \"receiver_bank_account_id\": 2,\n    \"sender_id\": 1,\n    \"receiver_id\": 2,\n    \"amount\": 10,\n    \"transfer_fee\": 5,\n    \"purpose\": \"payment\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost/api/bank-transfers",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"api",
-								"bank-transfers"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Create a bank transfer",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "default"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"sender_bank_account_id\": 1,\n    \"receiver_bank_account_id\": 2,\n    \"sender_id\": 1,\n    \"receiver_id\": 2,\n    \"amount\": 10,\n    \"transfer_fee\": 5,\n    \"purpose\": \"payment\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost/api/bank-transfers",
-									"host": [
-										"localhost"
-									],
-									"path": [
-										"api",
-										"bank-transfers"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:28:20 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:28:20 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.6"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "59"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Length",
-									"value": "238"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": {\n        \"sender_bank_account_id\": 1,\n        \"receiver_bank_account_id\": 2,\n        \"sender_id\": 1,\n        \"receiver_id\": 2,\n        \"amount\": 10,\n        \"transfer_fee\": 5,\n        \"purpose\": \"payment\",\n        \"updated_at\": \"2022-05-31T12:28:20.000000Z\",\n        \"created_at\": \"2022-05-31T12:28:20.000000Z\",\n        \"id\": 2\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Get all sent transfers via bank account ",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "localhost/api/bank-transfers/accounts/1/sent",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"api",
-								"bank-transfers",
-								"accounts",
-								"1",
-								"sent"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get all sent transfers via bank account ",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "default"
-									}
-								],
-								"url": {
-									"raw": "localhost/api/bank-transfers/accounts/1/sent",
-									"host": [
-										"localhost"
-									],
-									"path": [
-										"api",
-										"bank-transfers",
-										"accounts",
-										"1",
-										"sent"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:24:08 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:24:08 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.6"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "57"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Length",
-									"value": "249"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": 1,\n        \"sender_bank_account_id\": 1,\n        \"receiver_bank_account_id\": 2,\n        \"sender_id\": 1,\n        \"receiver_id\": 2,\n        \"amount\": 10,\n        \"transfer_fee\": 5,\n        \"purpose\": \"payment\",\n        \"created_at\": \"2022-05-31T12:10:06.000000Z\",\n        \"updated_at\": \"2022-05-31T12:10:06.000000Z\",\n        \"deleted_at\": null\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Get all received transfers via bank account ",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "localhost/api/bank-transfers/accounts/2/received",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"api",
-								"bank-transfers",
-								"accounts",
-								"2",
-								"received"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get all received transfers via bank account ",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "default"
-									}
-								],
-								"url": {
-									"raw": "localhost/api/bank-transfers/accounts/2/received",
-									"host": [
-										"localhost"
-									],
-									"path": [
-										"api",
-										"bank-transfers",
-										"accounts",
-										"2",
-										"received"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:30:08 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:30:08 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.6"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "59"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Length",
-									"value": "497"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": 1,\n        \"sender_bank_account_id\": 1,\n        \"receiver_bank_account_id\": 2,\n        \"sender_id\": 1,\n        \"receiver_id\": 2,\n        \"amount\": 10,\n        \"transfer_fee\": 5,\n        \"purpose\": \"payment\",\n        \"created_at\": \"2022-05-31T12:10:06.000000Z\",\n        \"updated_at\": \"2022-05-31T12:10:06.000000Z\",\n        \"deleted_at\": null\n    },\n    {\n        \"id\": 2,\n        \"sender_bank_account_id\": 1,\n        \"receiver_bank_account_id\": 2,\n        \"sender_id\": 1,\n        \"receiver_id\": 2,\n        \"amount\": 10,\n        \"transfer_fee\": 5,\n        \"purpose\": \"payment\",\n        \"created_at\": \"2022-05-31T12:28:20.000000Z\",\n        \"updated_at\": \"2022-05-31T12:28:20.000000Z\",\n        \"deleted_at\": null\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Get all transfers via bank account ",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "localhost/api/bank-transfers/accounts/2/all",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"api",
-								"bank-transfers",
-								"accounts",
-								"2",
-								"all"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get all transfers via bank account ",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "default"
-									}
-								],
-								"url": {
-									"raw": "localhost/api/bank-transfers/accounts/2/all",
-									"host": [
-										"localhost"
-									],
-									"path": [
-										"api",
-										"bank-transfers",
-										"accounts",
-										"2",
-										"all"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:53:51 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:53:51 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.6"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "57"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Length",
-									"value": "497"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": 2,\n        \"sender_bank_account_id\": 1,\n        \"receiver_bank_account_id\": 2,\n        \"sender_id\": 1,\n        \"receiver_id\": 2,\n        \"amount\": 10,\n        \"transfer_fee\": 5,\n        \"purpose\": \"payment\",\n        \"created_at\": \"2022-05-31T12:28:20.000000Z\",\n        \"updated_at\": \"2022-05-31T12:28:20.000000Z\",\n        \"deleted_at\": null\n    },\n    {\n        \"id\": 1,\n        \"sender_bank_account_id\": 1,\n        \"receiver_bank_account_id\": 2,\n        \"sender_id\": 1,\n        \"receiver_id\": 2,\n        \"amount\": 10,\n        \"transfer_fee\": 5,\n        \"purpose\": \"payment\",\n        \"created_at\": \"2022-05-31T12:10:06.000000Z\",\n        \"updated_at\": \"2022-05-31T12:10:06.000000Z\",\n        \"deleted_at\": null\n    }\n]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Bank Accounts",
-			"item": [
-				{
-					"name": "Create bank account",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"user_id\": 1,\n    \"balance\": 2000\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost/api/bank-accounts",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"api",
-								"bank-accounts"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Create bank account",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"user_id\": 1,\n    \"balance\": 2000\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost/api/bank-accounts",
-									"host": [
-										"localhost"
-									],
-									"path": [
-										"api",
-										"bank-accounts"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:26:08 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:26:08 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.6"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "57"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Length",
-									"value": "234"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": {\n        \"id\": 6,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Arisha Barron\",\n            \"email\": \"arisha@email.com\",\n            \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n        },\n        \"balance\": 2000\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Update bank account",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"user_id\": 1,\n    \"balance\": 3000\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost/api/bank-accounts/5",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"api",
-								"bank-accounts",
-								"5"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Update bank account",
-							"originalRequest": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"user_id\": 1,\n    \"balance\": 3000\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost/api/bank-accounts/5",
-									"host": [
-										"localhost"
-									],
-									"path": [
-										"api",
-										"bank-accounts",
-										"5"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:25:50 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:25:50 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.6"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "58"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Length",
-									"value": "234"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": {\n        \"id\": 5,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Arisha Barron\",\n            \"email\": \"arisha@email.com\",\n            \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n        },\n        \"balance\": 3000\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Get a bank account",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost/api/bank-accounts/5",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"api",
-								"bank-accounts",
-								"5"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get a bank account",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost/api/bank-accounts/5",
-									"host": [
-										"localhost"
-									],
-									"path": [
-										"api",
-										"bank-accounts",
-										"5"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:26:21 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:26:21 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.6"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "56"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Length",
-									"value": "234"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": {\n        \"id\": 5,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Arisha Barron\",\n            \"email\": \"arisha@email.com\",\n            \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n        },\n        \"balance\": 3000\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Get all bank accounts",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost/api/bank-accounts",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"api",
-								"bank-accounts"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get all bank accounts",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost/api/bank-accounts",
-									"host": [
-										"localhost"
-									],
-									"path": [
-										"api",
-										"bank-accounts"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:26:37 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:26:37 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.6"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "59"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Length",
-									"value": "1370"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 985\n        },\n        {\n            \"id\": 2,\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 1015\n        },\n        {\n            \"id\": 3,\n            \"user\": {\n                \"id\": 3,\n                \"name\": \"Rhonda Church\",\n                \"email\": \"rhonda@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 1000\n        },\n        {\n            \"id\": 4,\n            \"user\": {\n                \"id\": 4,\n                \"name\": \"Georgina Hazel\",\n                \"email\": \"georgina@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 1000\n        },\n        {\n            \"id\": 5,\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 3000\n        },\n        {\n            \"id\": 6,\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 2000\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Delete a bank account",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "localhost/api/bank-accounts/5",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"api",
-								"bank-accounts",
-								"5"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Delete a bank account",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "localhost/api/bank-accounts/5",
-									"host": [
-										"localhost"
-									],
-									"path": [
-										"api",
-										"bank-accounts",
-										"5"
-									]
-								}
-							},
-							"status": "No Content",
-							"code": 204,
-							"_postman_previewlanguage": "plain",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:27:01 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:27:01 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.6"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "58"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": null
-						}
-					]
-				}
-			]
-		}
-	]
+    "info": {
+        "_postman_id": "058c4151-cc4b-4d28-8f33-6e48b7cc77d9",
+        "name": "Bank API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Bank Transfers",
+            "item": [
+                {
+                    "name": "Create a bank transfer",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "default"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"sender_bank_account_id\": 1,\n    \"receiver_bank_account_id\": 2,\n    \"sender_id\": 1,\n    \"receiver_id\": 2,\n    \"amount\": 10,\n    \"transfer_fee\": 5,\n    \"purpose\": \"payment\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "localhost/api/bank-transfers",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "api",
+                                "bank-transfers"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Create a bank transfer",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "default"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"sender_bank_account_id\": 1,\n    \"receiver_bank_account_id\": 2,\n    \"sender_id\": 1,\n    \"receiver_id\": 2,\n    \"amount\": 10,\n    \"transfer_fee\": 5,\n    \"purpose\": \"payment\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "localhost/api/bank-transfers",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "bank-transfers"
+                                    ]
+                                }
+                            },
+                            "status": "Created",
+                            "code": 201,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Host",
+                                    "value": "localhost"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 14:03:41 GMT"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 14:03:41 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "close"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "PHP/8.1.6"
+                                },
+                                {
+                                    "key": "Cache-Control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "key": "X-RateLimit-Limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "X-RateLimit-Remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "892"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": {\n        \"id\": 4,\n        \"sender_bank_account\": {\n            \"id\": 1,\n            \"user_id\": 1,\n            \"balance\": 940,\n            \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n            \"deleted_at\": null\n        },\n        \"receiver_bank_account_id\": {\n            \"id\": 2,\n            \"user_id\": 2,\n            \"balance\": 1060,\n            \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n            \"deleted_at\": null\n        },\n        \"sender\": {\n            \"id\": 1,\n            \"name\": \"Arisha Barron\",\n            \"email\": \"arisha@email.com\",\n            \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n        },\n        \"receiver\": {\n            \"id\": 2,\n            \"name\": \"Branden Gibson\",\n            \"email\": \"branden@email.com\",\n            \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n        },\n        \"amount\": 10,\n        \"transfer_fee\": 5,\n        \"purpose\": \"payment\",\n        \"created_at\": \"2022-05-31T14:03:41.000000Z\",\n        \"updated_at\": \"2022-05-31T14:03:41.000000Z\"\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get all sent transfers via bank account ",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "default"
+                            }
+                        ],
+                        "url": {
+                            "raw": "localhost/api/bank-transfers/accounts/1/sent",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "api",
+                                "bank-transfers",
+                                "accounts",
+                                "1",
+                                "sent"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get all sent transfers via bank account ",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "default"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "localhost/api/bank-transfers/accounts/1/sent",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "bank-transfers",
+                                        "accounts",
+                                        "1",
+                                        "sent"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Host",
+                                    "value": "localhost"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 14:03:51 GMT"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 14:03:51 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "close"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "PHP/8.1.6"
+                                },
+                                {
+                                    "key": "Cache-Control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "key": "X-RateLimit-Limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "X-RateLimit-Remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "3546"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T12:10:06.000000Z\",\n            \"updated_at\": \"2022-05-31T12:10:06.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T12:28:20.000000Z\",\n            \"updated_at\": \"2022-05-31T12:28:20.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T14:01:56.000000Z\",\n            \"updated_at\": \"2022-05-31T14:01:56.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T14:03:41.000000Z\",\n            \"updated_at\": \"2022-05-31T14:03:41.000000Z\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get all received transfers via bank account ",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "default"
+                            }
+                        ],
+                        "url": {
+                            "raw": "localhost/api/bank-transfers/accounts/2/received",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "api",
+                                "bank-transfers",
+                                "accounts",
+                                "2",
+                                "received"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get all received transfers via bank account ",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "default"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "localhost/api/bank-transfers/accounts/2/received",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "bank-transfers",
+                                        "accounts",
+                                        "2",
+                                        "received"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Host",
+                                    "value": "localhost"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 14:04:06 GMT"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 14:04:06 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "close"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "PHP/8.1.6"
+                                },
+                                {
+                                    "key": "Cache-Control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "key": "X-RateLimit-Limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "X-RateLimit-Remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "3546"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T12:10:06.000000Z\",\n            \"updated_at\": \"2022-05-31T12:10:06.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T12:28:20.000000Z\",\n            \"updated_at\": \"2022-05-31T12:28:20.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T14:01:56.000000Z\",\n            \"updated_at\": \"2022-05-31T14:01:56.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T14:03:41.000000Z\",\n            \"updated_at\": \"2022-05-31T14:03:41.000000Z\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get all transfers via bank account ",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "default"
+                            }
+                        ],
+                        "url": {
+                            "raw": "localhost/api/bank-transfers/accounts/2/all",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "api",
+                                "bank-transfers",
+                                "accounts",
+                                "2",
+                                "all"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get all transfers via bank account ",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "default"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "localhost/api/bank-transfers/accounts/2/all",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "bank-transfers",
+                                        "accounts",
+                                        "2",
+                                        "all"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Host",
+                                    "value": "localhost"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 14:04:16 GMT"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 14:04:16 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "close"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "PHP/8.1.6"
+                                },
+                                {
+                                    "key": "Cache-Control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "key": "X-RateLimit-Limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "X-RateLimit-Remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "3546"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 4,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T14:03:41.000000Z\",\n            \"updated_at\": \"2022-05-31T14:03:41.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T14:01:56.000000Z\",\n            \"updated_at\": \"2022-05-31T14:01:56.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T12:28:20.000000Z\",\n            \"updated_at\": \"2022-05-31T12:28:20.000000Z\"\n        },\n        {\n            \"id\": 1,\n            \"sender_bank_account\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"balance\": 940,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"receiver_bank_account_id\": {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"balance\": 1060,\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T14:03:41.000000Z\",\n                \"deleted_at\": null\n            },\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"amount\": 10,\n            \"transfer_fee\": 5,\n            \"purpose\": \"payment\",\n            \"created_at\": \"2022-05-31T12:10:06.000000Z\",\n            \"updated_at\": \"2022-05-31T12:10:06.000000Z\"\n        }\n    ]\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Bank Accounts",
+            "item": [
+                {
+                    "name": "Create bank account",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user_id\": 1,\n    \"balance\": 2000\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "localhost/api/bank-accounts",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "api",
+                                "bank-accounts"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Create bank account",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"user_id\": 1,\n    \"balance\": 2000\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "localhost/api/bank-accounts",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "bank-accounts"
+                                    ]
+                                }
+                            },
+                            "status": "Created",
+                            "code": 201,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Host",
+                                    "value": "localhost"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 12:26:08 GMT"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 12:26:08 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "close"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "PHP/8.1.6"
+                                },
+                                {
+                                    "key": "Cache-Control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "key": "X-RateLimit-Limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "X-RateLimit-Remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "234"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": {\n        \"id\": 6,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Arisha Barron\",\n            \"email\": \"arisha@email.com\",\n            \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n        },\n        \"balance\": 2000\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Update bank account",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user_id\": 1,\n    \"balance\": 3000\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "localhost/api/bank-accounts/5",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "api",
+                                "bank-accounts",
+                                "5"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Update bank account",
+                            "originalRequest": {
+                                "method": "PUT",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"user_id\": 1,\n    \"balance\": 3000\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "localhost/api/bank-accounts/5",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "bank-accounts",
+                                        "5"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Host",
+                                    "value": "localhost"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 12:25:50 GMT"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 12:25:50 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "close"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "PHP/8.1.6"
+                                },
+                                {
+                                    "key": "Cache-Control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "key": "X-RateLimit-Limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "X-RateLimit-Remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "234"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": {\n        \"id\": 5,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Arisha Barron\",\n            \"email\": \"arisha@email.com\",\n            \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n        },\n        \"balance\": 3000\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get a bank account",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "localhost/api/bank-accounts/5",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "api",
+                                "bank-accounts",
+                                "5"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get a bank account",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "localhost/api/bank-accounts/5",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "bank-accounts",
+                                        "5"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Host",
+                                    "value": "localhost"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 12:26:21 GMT"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 12:26:21 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "close"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "PHP/8.1.6"
+                                },
+                                {
+                                    "key": "Cache-Control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "key": "X-RateLimit-Limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "X-RateLimit-Remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "234"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": {\n        \"id\": 5,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Arisha Barron\",\n            \"email\": \"arisha@email.com\",\n            \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n            \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n        },\n        \"balance\": 3000\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get all bank accounts",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "localhost/api/bank-accounts",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "api",
+                                "bank-accounts"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get all bank accounts",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "localhost/api/bank-accounts",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "bank-accounts"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Host",
+                                    "value": "localhost"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 12:26:37 GMT"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 12:26:37 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "close"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "PHP/8.1.6"
+                                },
+                                {
+                                    "key": "Cache-Control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "key": "X-RateLimit-Limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "X-RateLimit-Remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "1370"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 985\n        },\n        {\n            \"id\": 2,\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Branden Gibson\",\n                \"email\": \"branden@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 1015\n        },\n        {\n            \"id\": 3,\n            \"user\": {\n                \"id\": 3,\n                \"name\": \"Rhonda Church\",\n                \"email\": \"rhonda@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 1000\n        },\n        {\n            \"id\": 4,\n            \"user\": {\n                \"id\": 4,\n                \"name\": \"Georgina Hazel\",\n                \"email\": \"georgina@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 1000\n        },\n        {\n            \"id\": 5,\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 3000\n        },\n        {\n            \"id\": 6,\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Arisha Barron\",\n                \"email\": \"arisha@email.com\",\n                \"email_verified_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"created_at\": \"2022-05-31T12:09:55.000000Z\",\n                \"updated_at\": \"2022-05-31T12:09:55.000000Z\"\n            },\n            \"balance\": 2000\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete a bank account",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "localhost/api/bank-accounts/5",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "api",
+                                "bank-accounts",
+                                "5"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Delete a bank account",
+                            "originalRequest": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                    "raw": "localhost/api/bank-accounts/5",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "bank-accounts",
+                                        "5"
+                                    ]
+                                }
+                            },
+                            "status": "No Content",
+                            "code": 204,
+                            "_postman_previewlanguage": "plain",
+                            "header": [
+                                {
+                                    "key": "Host",
+                                    "value": "localhost"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 12:27:01 GMT"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Tue, 31 May 2022 12:27:01 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "close"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "PHP/8.1.6"
+                                },
+                                {
+                                    "key": "Cache-Control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "X-RateLimit-Limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "X-RateLimit-Remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

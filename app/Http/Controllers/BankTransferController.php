@@ -63,16 +63,16 @@ class BankTransferController extends Controller
 
     public function getSentTransferHistoryViaBankAccount(int $bankAccountId)
     {
-        return $this->bankTransferRepository->getSentTransferHistoryViaBankAccountId($bankAccountId);
+        return BankTransferResource::collection($this->bankTransferRepository->getSentTransferHistoryViaBankAccountId($bankAccountId));
     }
 
     public function getReceivedTransferHistoryViaBankAccountId(int $bankAccountId)
     {
-        return $this->bankTransferRepository->getReceivedTransferHistoryViaBankAccountId($bankAccountId);
+        return BankTransferResource::collection($this->bankTransferRepository->getReceivedTransferHistoryViaBankAccountId($bankAccountId));
     }
 
     public function getAllTransfersViaBankAccountId(int $bankAccountId)
     {
-        return $this->bankTransferRepository->getAllTransfersViaBankAccountId($bankAccountId);
+        return BankTransferResource::collection($this->bankTransferRepository->getAllTransfersViaBankAccountId($bankAccountId));
     }
 }

@@ -13,9 +13,14 @@ class BankTransfer extends Model
 
     protected $guarded = ['id'];
 
-    public function bankAccount(): BelongsTo
+    public function senderBankAccount(): BelongsTo
     {
-        return $this->belongsTo(BankAccount::class);
+        return $this->belongsTo(BankAccount::class, 'sender_bank_account_id');
+    }
+
+    public function receiverBankAccount(): BelongsTo
+    {
+        return $this->belongsTo(BankAccount::class, 'receiver_bank_account_id');
     }
 
     public function sender(): BelongsTo

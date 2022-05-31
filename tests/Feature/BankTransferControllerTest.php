@@ -46,7 +46,7 @@ final class BankTransferControllerTest extends TestCase
         $response = $this->getJson("/api/bank-transfers/accounts/{$sender->json('data')['id']}/sent");
 
         $response->assertOk();
-        $this->assertCount(1, $response->json());
+        $this->assertCount(1, $response->json('data'));
     }
 
     public function testIfCanGetAllReceivedTransfers(): void
@@ -67,7 +67,7 @@ final class BankTransferControllerTest extends TestCase
         $response = $this->getJson("/api/bank-transfers/accounts/{$receiver->json('data')['id']}/received");
 
         $response->assertOk();
-        $this->assertCount(1, $response->json());
+        $this->assertCount(1, $response->json('data'));
     }
 
     public function testIfCanGetAllTransfers(): void
@@ -98,7 +98,7 @@ final class BankTransferControllerTest extends TestCase
         $response = $this->getJson("/api/bank-transfers/accounts/{$receiver->json('data')['id']}/all");
 
         $response->assertOk();
-        $this->assertCount(2, $response->json());
+        $this->assertCount(2, $response->json('data'));
     }
 
     private function createBankAccount(): TestResponse
